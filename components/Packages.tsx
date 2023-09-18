@@ -1,56 +1,12 @@
 'use client'
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card'
-import { Section } from './ui/section'
+
+import { Tabs } from '@radix-ui/react-tabs'
 import DoubleStarSVG from 'public/double-star.svg'
 import { Button } from './ui/button'
+import { Card, CardContent, CardFooter, CardHeader } from './ui/card'
+import { Section } from './ui/section'
 import { Separator } from './ui/separator'
-import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
-import LogoSVG from 'public/logo.svg'
-import { Badge } from './ui/badge'
-import { Tabs } from '@radix-ui/react-tabs'
 import { TabsContent, TabsList, TabsTrigger } from './ui/tabs'
-
-const PUPPY_PACKAGES = [
-  {
-    title: 'TRADITIONAL TRAINING PACKAGE',
-    price: '$220',
-    duration: '/6 weeks',
-    includes: [
-      'Skills: sit, lay down, come, place, touch',
-      'Potty and crate training',
-      'Enrichment activity',
-    ],
-    excludes: ['+5 drop-in visits', '+25% off overnight pet sitting'],
-    cta: 'Schedule traditional training',
-  },
-  {
-    title: 'PREMIUM TRAINING PACKAGE',
-    price: '$335',
-    duration: '/6 weeks',
-    includes: [
-      'Skills: sit, lay down, come, place, touch',
-      'Potty and crate training',
-      'Enrichment activity',
-      '+5 drop-in visits',
-    ],
-    excludes: ['+25% off overnight pet sitting'],
-    cta: 'Schedule premium training',
-  },
-  {
-    title: 'ULTIMATE TRAINING PACKAGE',
-    price: '$500',
-    duration: '/8 weeks',
-    includes: [
-      'Skills: sit, lay down, come, place, touch',
-      'Potty and crate training',
-      'Enrichment activity',
-      '+5 drop-in visits',
-      '+25% off overnight pet sitting',
-    ],
-    excludes: [],
-    cta: 'Schedule ultimate training',
-  },
-]
 
 const puppyTrainingOptions = [
   {
@@ -88,6 +44,78 @@ const puppyTrainingOptions = [
       'Six sessions of training includes skills such as Sit, Stay, Down, Place, Touch, Heel, and Leave-it.',
   },
 ]
+
+const puppyPackages = [
+  {
+    title: 'TRADITIONAL TRAINING PACKAGE',
+    price: '$220',
+    duration: '/6 sessions',
+    includes: [
+      'Skills: sit, lay down, come, place, touch',
+      'Potty and crate training',
+      'Enrichment activity',
+    ],
+    excludes: ['+5 drop-in visits', '+25% off overnight pet sitting'],
+    cta: 'Schedule traditional training',
+  },
+  {
+    title: 'PREMIUM TRAINING PACKAGE',
+    price: '$335',
+    duration: '/6 sessions',
+    includes: [
+      'Skills: sit, lay down, come, place, touch',
+      'Potty and crate training',
+      'Enrichment activity',
+      '+5 drop-in visits',
+    ],
+    excludes: ['+25% off overnight pet sitting'],
+    cta: 'Schedule premium training',
+  },
+  {
+    title: 'ULTIMATE TRAINING PACKAGE',
+    price: '$500',
+    duration: '/8 sessions',
+    includes: [
+      'Skills: sit, lay down, come, place, touch',
+      'Potty and crate training',
+      'Enrichment activity',
+      '+5 drop-in visits',
+      '+25% off overnight pet sitting',
+    ],
+    excludes: [],
+    cta: 'Schedule ultimate training',
+  },
+]
+
+const adultPackages = [
+  {
+    title: 'TRAINING PACKAGE',
+    price: '$155',
+    duration: '/4 sessions',
+    includes: [
+      'Skills: sit, lay down, come, place, touch',
+      'Potty and crate training',
+      'Enrichment activity',
+      '+5 drop-in visits',
+    ],
+    excludes: ['+25% off overnight pet sitting'],
+    cta: 'Schedule premium training',
+  },
+  {
+    title: 'TRAINING PACKAGE PLUS',
+    price: '$250',
+    duration: '/5 sessions',
+    includes: [
+      'Skills: sit, lay down, come, place, touch',
+      'Potty and crate training',
+      'Enrichment activity',
+      '+5 drop-in visits',
+    ],
+    excludes: ['+25% off overnight pet sitting'],
+    cta: 'Schedule premium training',
+  },
+]
+
 const Breadcrumb = ({ selected }: { selected: boolean }) => {
   return (
     <svg
@@ -138,7 +166,7 @@ export default function Packages() {
           </h1>
         </div>
         <Tabs defaultValue="puppy">
-          <TabsList className="mt-3 lg:mt-0">
+          <TabsList className="mt-5">
             <TabsTrigger value="puppy">Puppy</TabsTrigger>
             <TabsTrigger value="adult">Adult</TabsTrigger>
           </TabsList>
@@ -146,7 +174,7 @@ export default function Packages() {
             value="puppy"
             className="hidden w-full max-w-7xl flex-row justify-center gap-6 lg:flex"
           >
-            {PUPPY_PACKAGES.map((item, i) => (
+            {puppyPackages.map((item, i) => (
               <Card key={i}>
                 <CardHeader>
                   <h2 className="text-lg font-bold text-primary">
@@ -165,7 +193,6 @@ export default function Packages() {
                   <Separator className="my-4" />
 
                   <div>
-                    <h3>6 weeks of training includes:</h3>
                     <ul className="list-inside">
                       {item.includes.map((include, i) => (
                         <li key={i}> {include}</li>
@@ -184,7 +211,7 @@ export default function Packages() {
             value="adult"
             className="mx-auto hidden w-full max-w-7xl flex-row justify-center gap-6 lg:flex"
           >
-            {PUPPY_PACKAGES.map((item, i) => (
+            {adultPackages.map((item, i) => (
               <Card key={i}>
                 <CardHeader>
                   <h2 className="text-lg font-bold text-primary">
@@ -203,7 +230,6 @@ export default function Packages() {
                   <Separator className="my-4" />
 
                   <div>
-                    <h3>6 weeks of training includes:</h3>
                     <ul className="list-inside">
                       {item.includes.map((include, i) => (
                         <li key={i}> {include}</li>
@@ -221,7 +247,7 @@ export default function Packages() {
         </Tabs>
 
         <div className="mt-12 flex lg:hidden">
-          <Card>
+          <Card className="w-72">
             <CardHeader>
               <h2 className="text-lg font-bold text-primary"></h2>
             </CardHeader>
@@ -235,7 +261,6 @@ export default function Packages() {
               <Separator className="my-4" />
 
               <div>
-                <h3>6 weeks of training includes:</h3>
                 <ul className="list-inside"></ul>
               </div>
             </CardContent>
@@ -256,7 +281,7 @@ export default function Packages() {
             <Breadcrumb selected={false} />
           </button>
         </div>
-
+        {/*
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="secondary" className="mt-12">
@@ -285,7 +310,10 @@ export default function Packages() {
               </div>
             </div>
           </DialogContent>
-        </Dialog>
+        </Dialog> */}
+        <a href="service-list.pdf" className="mt-12">
+          <Button variant={'secondary'}>Complete package list</Button>
+        </a>
       </Section>
     </>
   )

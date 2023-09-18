@@ -1,9 +1,9 @@
-import './globals.css'
-import { Poppins } from 'next/font/google'
-import { defaultMetadata } from './metadata'
-import { Nav } from '@/components/Nav'
-import { FooterNav } from '@/components/FooterNav'
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import { Poppins } from 'next/font/google'
+import Analytics from './analytics'
+import './globals.css'
+import { defaultMetadata } from './metadata'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,15 +28,14 @@ export default function RootLayout({
         <a href="#main" className="sr-only" aria-label="skip">
           skip to content
         </a>
-        <Header>
-          <Nav />
-        </Header>
+
+        <Header />
 
         <main id="main">{children}</main>
 
-        <footer id="footer">
-          <FooterNav />
-        </footer>
+        <Footer />
+
+        <Analytics />
       </body>
     </html>
   )

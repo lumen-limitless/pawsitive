@@ -1,9 +1,9 @@
 'use client'
 import { ArrowRight } from 'lucide-react'
-import { Button } from './ui/button'
-import { Section } from './ui/section'
 import PawCircleSVG from 'public/paw-circle.svg'
 import PlusCircleSVG from 'public/plus-circle.svg'
+import { Button } from './ui/button'
+import { Section } from './ui/section'
 import { Separator } from './ui/separator'
 const services = [
   {

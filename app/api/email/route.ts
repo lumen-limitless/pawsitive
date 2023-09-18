@@ -1,19 +1,19 @@
-import nodemailer from 'nodemailer'
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json()
 
   // Validate the form data
   if (!name || !email || !message) {
-    return NextResponse.json({ message: 'One or more fields are missing.' })
+    return NextResponse.error()
   }
 
   // Configure the email transport using the SMTP server of your choice
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
+    host: 'smtp.gmail.com',
     port: Number(process.env.SMTP_PORT),
-    secure: process.env.SMTP_SECURE === 'true',
+    secure: true,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,

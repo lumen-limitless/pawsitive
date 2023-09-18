@@ -1,8 +1,9 @@
 'use client'
 import { cn } from '@/lib/utils'
 import React from 'react'
+import { Nav } from './Nav'
 
-export default function Header({ children }: { children: React.ReactNode }) {
+export default function Header() {
   const [prevScrollPos, setPrevScrollPos] = React.useState<number>(0)
   const [visible, setVisible] = React.useState<boolean>(true)
 
@@ -25,11 +26,11 @@ export default function Header({ children }: { children: React.ReactNode }) {
     <header
       id="header"
       className={cn(
-        'sticky z-20 bg-background transition-all duration-300 ease-in-out',
-        visible ? 'top-0' : '-top-100'
+        'fixed z-40 w-full bg-background transition-all duration-300 ease-in-out',
+        visible ? 'translate-y-0' : '-translate-y-full',
       )}
     >
-      {children}
+      <Nav />
     </header>
   )
 }

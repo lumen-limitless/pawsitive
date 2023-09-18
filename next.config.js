@@ -12,6 +12,9 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: undefined,
   },
+  experimental: {
+    serverActions: true,
+  },
 
   webpack(config) {
     config.module.rules.push({

@@ -1,8 +1,8 @@
 'use client'
-import { Briefcase, Dog } from 'lucide-react'
+import { BriefcaseIcon, DogIcon } from 'lucide-react'
+import AboutDogSVG from 'public/about-dog.svg'
 import { Badge } from './ui/badge'
 import { Section } from './ui/section'
-import AboutDogSVG from 'public/about-dog.svg'
 
 export default function About() {
   return (
@@ -19,11 +19,11 @@ export default function About() {
           <div className="flex flex-col items-start justify-center gap-3">
             <Badge variant={'secondary'}>
               {' '}
-              <Briefcase className="mr-1" /> Professional pet care provider
+              <BriefcaseIcon className="mr-1" /> Professional pet care provider
             </Badge>
             <Badge variant={'secondary'}>
               {' '}
-              <Dog className="mr-1" />
+              <DogIcon className="mr-1" />
               Dog trainer
             </Badge>
           </div>

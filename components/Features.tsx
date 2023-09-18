@@ -1,7 +1,7 @@
 'use client'
 import { Section } from '@/components/ui/section'
-import HeartSVG from 'public/heart.svg'
 import FlowerSVG from 'public/flower.svg'
+import HeartSVG from 'public/heart.svg'
 import StarSVG from 'public/star.svg'
 
 const features = [
@@ -27,7 +27,7 @@ const features = [
 
 export default function Features() {
   return (
-    <Section className="bg-primary/10 px-5 py-12">
+    <Section id="features" className="bg-primary/10 px-5 py-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-[100px] lg:flex-row">
         {features.map((feature, i) => (
           <div

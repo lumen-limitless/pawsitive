@@ -1,6 +1,6 @@
 'use client'
-import { Section } from './ui/section'
 import TrainingSVG from 'public/training.svg'
+import { Section } from './ui/section'
 
 export default function Training() {
   return (

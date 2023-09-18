@@ -1,11 +1,12 @@
 'use client'
-import { useForm } from 'react-hook-form'
-import { Section } from './ui/section'
 import { zodResolver } from '@hookform/resolvers/zod'
-import * as z from 'zod'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import Socials from './Socials'
+import { Button } from './ui/button'
 import { Form, FormControl, FormField, FormItem, FormMessage } from './ui/form'
 import { Input } from './ui/input'
-import { Button } from './ui/button'
+import { Section } from './ui/section'
 import { Textarea } from './ui/textarea'
 
 const formSchema = z.object({
@@ -19,9 +20,6 @@ const formSchema = z.object({
 export default function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-    },
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -42,7 +40,7 @@ export default function Contact() {
     <Section
       id="contact"
       col
-      className="bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
+      className="bg-grape text-monochrome-50 px-5 py-12 xl:px-[269px]"
     >
       <h1 className="text-3xl font-semibold">Any questions?</h1>
       <p>Contact Pawsitive Pet Care today</p>
@@ -94,6 +92,9 @@ export default function Contact() {
           </Button>
         </form>
       </Form>
+      <div className="mt-9">
+        <Socials />
+      </div>
     </Section>
   )
 }
