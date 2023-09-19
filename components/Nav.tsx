@@ -70,23 +70,17 @@ export function Nav() {
           <MenuIcon />
         </SheetTrigger>
         <SheetContent
-          className="flex h-screen w-screen items-center"
+          className="flex h-screen w-screen items-center justify-center"
           side={'top'}
         >
-          <NavigationMenu className="flex-col" orientation="vertical">
-            <NavigationMenuList className="flex-col">
-              {navigationMenuItems.map((item) => (
-                <NavigationMenuItem key={item.label}>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href={item.href}
-                  >
-                    <SheetTrigger>{item.label}</SheetTrigger>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+          <div className="flex h-full flex-col justify-center gap-16 text-center text-2xl">
+            {navigationMenuItems.map((item) => (
+              <Link href={item.href} key={item.label}>
+                {' '}
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </SheetContent>
       </Sheet>
     </div>
