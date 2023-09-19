@@ -208,7 +208,13 @@ export default function Packages() {
                 </CardContent>
 
                 <CardFooter className="mt-4 justify-center">
-                  <Button variant="secondary">{item.cta}</Button>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button variant="secondary">{item.cta}</Button>
+                  </a>
                 </CardFooter>
               </Card>
             ))}
@@ -248,7 +254,9 @@ export default function Packages() {
                 </CardContent>
 
                 <CardFooter className="mt-4 justify-center">
-                  <Button variant="secondary">{item.cta}</Button>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform">
+                    <Button variant="secondary">{item.cta}</Button>
+                  </a>
                 </CardFooter>
               </Card>
             ))}

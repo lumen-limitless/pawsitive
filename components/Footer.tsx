@@ -1,30 +1,27 @@
 'use client'
 
-import { cn } from '@/lib/utils'
 import PawsitiveSVG from 'public/pawsitive.svg'
 import Socials from './Socials'
 
 export default function Footer() {
   return (
     <footer className="bg-[#131334]">
-      <div
-        className={cn(
-          'relative flex w-full flex-col items-center justify-center px-5 py-5 lg:h-[120px] lg:flex-row',
-        )}
-      >
-        <PawsitiveSVG className="relative left-5 h-12 lg:absolute" />
+      <div className="flex w-full flex-col items-center justify-center gap-9 px-5 py-9 lg:flex-row">
+        <PawsitiveSVG className="h-12" />
 
-        <p className="text-center text-sm text-gray-50">
-          Copyright &copy; {new Date().getFullYear()} Pawsitive Pet Care, LLC.
+        <p className="text-center text-sm text-gray-50 lg:mr-auto">
+          Copyright &copy; {new Date().getFullYear()} Pawsitive Pet Care, LLC.{' '}
+          <br className="lg:hidden" />
           All rights reserved.
         </p>
 
-        <div className="relative right-5 flex items-center justify-center lg:absolute">
+        <div className="flex items-center justify-center">
           <Socials />
         </div>
       </div>
+
       <div className="bg-black text-center">
-        <p className="py-2 text-white">
+        <p className="py-5 text-white">
           Website designed by{' '}
           <a
             href="https://toona.studio"
