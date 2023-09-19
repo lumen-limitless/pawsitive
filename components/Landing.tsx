@@ -1,10 +1,12 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import HeroDogIMG from 'public/hero-dog.png'
 import HeroPawSVG from 'public/hero-paw.svg'
 import { Button } from './ui/button'
 import { Section } from './ui/section'
+
 export default function Landing() {
   return (
     <Section id="home" className="mt-[100px] px-5 py-20">
@@ -19,10 +21,20 @@ export default function Landing() {
             our convenient services and experienced professionals.
           </p>
           <div className="flex flex-col items-center gap-3 lg:flex-row">
-            <Button className="w-full lg:w-auto">Book an appointment</Button>
-            <Button variant={'secondary'} className="w-full lg:w-auto">
-              Contact us
-            </Button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full lg:w-auto"
+            >
+              <Button className="w-full lg:w-auto">Book an appointment</Button>
+            </a>
+
+            <Link href="#contact" className="w-full lg:w-auto">
+              <Button variant={'secondary'} className="w-full lg:w-auto">
+                Contact us
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="relative h-80 w-80">

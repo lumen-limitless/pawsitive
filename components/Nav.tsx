@@ -15,23 +15,23 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 const navigationMenuItems = [
   {
     label: 'Home',
-    href: '#home',
+    href: '/#home',
   },
   {
     label: 'Services',
-    href: '#services',
+    href: '/#services',
   },
   {
     label: 'Packages',
-    href: '#packages',
+    href: '/#packages',
   },
   {
     label: 'About',
-    href: '#about',
+    href: '/#about',
   },
   {
     label: 'Contact',
-    href: '#contact',
+    href: '/#contact',
   },
 ]
 
@@ -57,7 +57,13 @@ export function Nav() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <Button className="ml-auto hidden lg:block">Book an appointment</Button>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Button className="ml-auto hidden lg:block">Book an appointment</Button>
+      </a>
 
       <Sheet>
         <SheetTrigger asChild className="ml-auto lg:hidden">

@@ -1,6 +1,8 @@
 'use client'
 
 import { Tabs } from '@radix-ui/react-tabs'
+import Link from 'next/link'
+import CheckSVG from 'public/check.svg'
 import DoubleStarSVG from 'public/double-star.svg'
 import { Button } from './ui/button'
 import { Card, CardContent, CardFooter, CardHeader } from './ui/card'
@@ -156,7 +158,7 @@ const Breadcrumb = ({ selected }: { selected: boolean }) => {
 export default function Packages() {
   return (
     <>
-      <Section id="packages" col className="bg-[#804DEC]/10 px-5 py-12">
+      <Section id="packages" className="flex-col bg-[#804DEC]/10 px-5 py-12">
         <div className="relative">
           <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
 
@@ -165,14 +167,14 @@ export default function Packages() {
             packages
           </h1>
         </div>
-        <Tabs defaultValue="puppy">
+        <Tabs defaultValue="puppy" className="lg:w-[75%]">
           <TabsList className="mt-5">
             <TabsTrigger value="puppy">Puppy</TabsTrigger>
             <TabsTrigger value="adult">Adult</TabsTrigger>
           </TabsList>
           <TabsContent
             value="puppy"
-            className="hidden w-full max-w-7xl flex-row justify-center gap-6 lg:flex"
+            className="flex w-full max-w-7xl flex-col justify-center gap-6 lg:flex-row"
           >
             {puppyPackages.map((item, i) => (
               <Card key={i}>
@@ -193,9 +195,13 @@ export default function Packages() {
                   <Separator className="my-4" />
 
                   <div>
-                    <ul className="list-inside">
+                    <ul className="list-inside space-y-3">
                       {item.includes.map((include, i) => (
-                        <li key={i}> {include}</li>
+                        <li key={i} className="flex items-center">
+                          {' '}
+                          <CheckSVG className="mr-2 h-5 w-5 text-primary" />{' '}
+                          {include}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -209,7 +215,7 @@ export default function Packages() {
           </TabsContent>
           <TabsContent
             value="adult"
-            className="mx-auto hidden w-full max-w-7xl flex-row justify-center gap-6 lg:flex"
+            className="flex w-full max-w-7xl flex-col justify-center gap-6 lg:flex-row"
           >
             {adultPackages.map((item, i) => (
               <Card key={i}>
@@ -230,9 +236,12 @@ export default function Packages() {
                   <Separator className="my-4" />
 
                   <div>
-                    <ul className="list-inside">
+                    <ul className="list-inside space-y-3">
                       {item.includes.map((include, i) => (
-                        <li key={i}> {include}</li>
+                        <li key={i} className="flex items-center">
+                          <CheckSVG className="mr-2 h-5 w-5 text-primary" />
+                          {include}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -246,74 +255,14 @@ export default function Packages() {
           </TabsContent>
         </Tabs>
 
-        <div className="mt-12 flex lg:hidden">
-          <Card className="w-72">
-            <CardHeader>
-              <h2 className="text-lg font-bold text-primary"></h2>
-            </CardHeader>
-
-            <CardContent>
-              <div>
-                <strong className="text-2xl font-extrabold"></strong>
-                <span className="text-opacity-80"></span>
-              </div>
-
-              <Separator className="my-4" />
-
-              <div>
-                <ul className="list-inside"></ul>
-              </div>
-            </CardContent>
-
-            <CardFooter className="mt-4 justify-center">
-              <Button variant="secondary"></Button>
-            </CardFooter>
-          </Card>
-        </div>
-        <div className="my-6 flex w-full items-center justify-center gap-6 lg:hidden">
-          <button>
-            <Breadcrumb selected />
-          </button>
-          <button>
-            <Breadcrumb selected={false} />
-          </button>
-          <button>
-            <Breadcrumb selected={false} />
-          </button>
-        </div>
-        {/*
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant="secondary" className="mt-12">
-              Complete package list
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[80%]">
-            <LogoSVG className="absolute left-3 top-3 h-12" />
-            <div className="flex flex-col">
-              <h1 className="mb-9 text-center text-2xl font-semibold">
-                Dog Training
-              </h1>
-
-              <div className="flex flex-col gap-6 text-sm lg:text-base">
-                {puppyTrainingOptions.map((option, i) => (
-                  <div key={i}>
-                    <div className="flex items-center gap-3">
-                      <h2 className="text-base font-bold lg:text-lg">
-                        {option.title}
-                      </h2>{' '}
-                      <Badge variant={'secondary'}>{option.price}</Badge>
-                    </div>
-                    <p>{option.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog> */}
-        <a href="service-list.pdf" className="mt-12">
+        <Link
+          href="service-list.pdf"
+          className="mt-12"
+          rel="noreferrer"
+          target="_blank"
+        >
           <Button variant={'secondary'}>Complete package list</Button>
-        </a>
+        </Link>
       </Section>
     </>
   )

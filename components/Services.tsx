@@ -1,5 +1,6 @@
 'use client'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 import PawCircleSVG from 'public/paw-circle.svg'
 import PlusCircleSVG from 'public/plus-circle.svg'
 import { Button } from './ui/button'
@@ -44,22 +45,24 @@ export default function Services() {
         </div>
         <div className="mt-8 flex flex-col items-center gap-3 lg:flex-row">
           <Button className="w-full lg:w-auto">Schedule appointment</Button>
-          <Button variant={'secondary'} className="w-full lg:w-auto">
-            View prices <ArrowRight className="ml-2 inline-block" />
-          </Button>
+          <Link href="service-list.pdf" target="_blank" className="w-full">
+            <Button variant={'secondary'} className="w-full lg:w-auto">
+              View prices <ArrowRight className="ml-2 inline-block" />
+            </Button>
+          </Link>
         </div>
         <Separator className="my-4" />
         <h2 className="text-2xl font-semibold">Add Ons</h2>
         <div className="mt-4 flex flex-col gap-4 lg:flex-row">
-          <div className="flex">
+          <div className="flex items-center">
             <PlusCircleSVG className="h-10" />
             <p>Nail trim & file</p>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             <PlusCircleSVG className="h-10" />
             <p>Enrichment activity</p>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             <PlusCircleSVG className="h-10" />
             <p>Yarn clean-up</p>
           </div>

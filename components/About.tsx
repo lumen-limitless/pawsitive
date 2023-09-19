@@ -1,12 +1,11 @@
 'use client'
 import { BriefcaseIcon, DogIcon } from 'lucide-react'
-import AboutDogSVG from 'public/about-dog.svg'
 import { Badge } from './ui/badge'
 import { Section } from './ui/section'
 
 export default function About() {
   return (
-    <Section id="about" col className="bg-[#CCBBF2]/10 px-5 py-12">
+    <Section id="about" className="bg-[#CCBBF2]/10 px-5 py-12">
       <div className="mx-auto flex w-full max-w-7xl flex-col lg:flex-row lg:gap-[120px]">
         <div className="max-w-[631px] space-y-4">
           <h1 className="text-3xl font-semibold">About us</h1>
@@ -50,7 +49,32 @@ export default function About() {
           </div>
         </div>
 
-        <AboutDogSVG className="relative mx-auto mt-12 w-[300px] lg:mx-0 lg:mt-0 lg:w-[700px]" />
+        <svg
+          viewBox="0 0 533 518"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M351.634 41.8977C444.691 83.7916 549.127 146.387 530.634 271.044C512.878 390.74 390.676 408.748 295 485.328C196.797 563.931 107.973 486.659 41.634 379.181C-6.09859 301.848 -10.9143 219.831 17.634 128.15C67.1328 -30.814 215.672 -19.3118 351.634 41.8977Z"
+            fill="url(#pattern1)"
+          />
+          <path
+            d="M351.634 41.8977C444.691 83.7916 549.127 146.387 530.634 271.044C512.878 390.74 390.676 408.748 295 485.328C196.797 563.931 107.973 486.659 41.634 379.181C-6.09859 301.848 -10.9143 219.831 17.634 128.15C67.1328 -30.814 215.672 -19.3118 351.634 41.8977Z"
+            fill="url(#pattern1)"
+          />
+          <defs>
+            <pattern id="pattern1" width="100%" height="100%">
+              <image
+                id="image1_18_6548"
+                xlinkHref="about.jpeg"
+                width="100%"
+                height="100%"
+                preserveAspectRatio="xMidYMid slice"
+              />
+            </pattern>
+          </defs>
+        </svg>
       </div>
     </Section>
   )

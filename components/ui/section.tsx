@@ -1,28 +1,18 @@
-interface SectionProps
-  extends React.DetailedHTMLProps<React.HTMLProps<HTMLElement>, HTMLElement> {
-  fullscreen?: boolean
-  centered?: boolean
-  col?: boolean
-}
+import { cn } from '@/lib/utils'
+
+interface SectionProps extends React.ComponentPropsWithoutRef<'section'> {}
 
 export const Section: React.FC<SectionProps> = ({
   children,
   className,
-  fullscreen,
-  centered,
-  col,
   ...props
 }: SectionProps) => {
   return (
     <section
-      className={[
+      className={cn(
         'relative flex h-full w-full flex-grow items-center',
-        col ? 'flex-col' : 'flex-row',
-        centered ? ' justify-center' : 'justify-start',
         className,
-      ]
-        .filter(Boolean)
-        .join(' ')}
+      )}
       {...props}
     >
       {children}
