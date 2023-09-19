@@ -6,4 +6,5 @@ export const APP_URL = process.env.NEXT_PUBLIC_APP_URL
 
 export const APP_NAME = 'Pawsitive Pet Care'
 
-export const APP_DESCRIPTION = 'Pawsitive Pet Care is a dog care website.'
+export const APP_DESCRIPTION =
+  'Paws Down the Best for your Pet! Pawsitive Pet Care is a dog care service located in Rochester, NY. We offer dog walking, dog sitting, and dog training services.'

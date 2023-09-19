@@ -10,22 +10,22 @@ const services = [
   {
     title: 'Overnight pet sitting',
     description:
-      'We treat your furry friend like one of our own, providing care.',
+      ' Price is per night, your pets will be cared for in your own home. $6 for additional dog, $2 for additional cat. ',
   },
   {
     title: 'Drop-in care',
     description:
-      'We treat your furry friend like one of our own, providing care.',
+      '- One hour of care that can include feedings, playtime, administering medicine, cleaning accidents, and potty breaks.',
   },
   {
     title: 'Dog walking',
     description:
-      'We treat your furry friend like one of our own, providing care.',
+      'Each walk will start at 30 minutes, an additional 30 minutes will cost $10. Walks will be provided around your neighborhood.',
   },
   {
     title: 'Adventure walk',
     description:
-      'We treat your furry friend like one of our own, providing care.',
+      'This service includes your pet care provider picking up your dog(s) and taking them to a local hiking trail. One hour of walking and exploring.',
   },
 ]
 
