@@ -1,5 +1,7 @@
 'use client'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Loader2 } from 'lucide-react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import Socials from './Socials'
@@ -9,7 +11,7 @@ import { Input } from './ui/input'
 import { Section } from './ui/section'
 import { Textarea } from './ui/textarea'
 
-const formSchema = z.object({
+export const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
   email: z.string().email({ message: 'Invalid email address' }),
   message: z
@@ -18,22 +20,31 @@ const formSchema = z.object({
 })
 
 export default function Contact() {
+  const [loading, setLoading] = React.useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true)
+    try {
+      const res = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
 
-    fetch('/api/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    })
+      if (!res.ok) {
+        throw new Error()
+      }
+
+      alert('Message sent successfully!')
+    } catch {
+      alert('Something went wrong, please try again later.')
+    }
+    setLoading(false)
   }
 
   return (
@@ -86,8 +97,13 @@ export default function Contact() {
             )}
           />
 
-          <Button type="submit" variant={'secondary'} className="w-full">
-            Send Message
+          <Button
+            type="submit"
+            variant={'secondary'}
+            disabled={loading}
+            className="w-full"
+          >
+            {loading ? <Loader2 className="animate-spin" size={24} /> : 'Send'}
           </Button>
         </form>
       </Form>
