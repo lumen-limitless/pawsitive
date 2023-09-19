@@ -76,8 +76,9 @@ export function Nav() {
           <div className="flex h-full flex-col justify-center gap-16 text-center text-2xl">
             {navigationMenuItems.map((item) => (
               <Link href={item.href} key={item.label}>
-                {' '}
-                {item.label}
+                <SheetTrigger>
+                  <span>{item.label}</span>
+                </SheetTrigger>
               </Link>
             ))}
           </div>
