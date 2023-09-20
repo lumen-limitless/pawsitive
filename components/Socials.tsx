@@ -7,7 +7,7 @@ export default function Socials() {
         <PhoneIcon />
       </a>
 
-      <a href="mailto:info@pawsitivepet.care">
+      <a href="mailto:info.pawsitivepetcare@gmail.com">
         <MailIcon />
       </a>
 

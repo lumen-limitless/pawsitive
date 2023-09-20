@@ -1,7 +1,6 @@
 'use client'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2 } from 'lucide-react'
-import React from 'react'
+import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import Socials from './Socials'
@@ -12,39 +11,18 @@ import { Section } from './ui/section'
 import { Textarea } from './ui/textarea'
 
 export const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
+  subject: z.string().min(2, { message: 'Name must be at least 2 characters' }),
   email: z.string().email({ message: 'Invalid email address' }),
-  message: z
+  body: z
     .string()
     .min(10, { message: 'Message must be at least 10 characters' }),
 })
 
 export default function Contact() {
-  const [loading, setLoading] = React.useState(false)
+  const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   })
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.debug(values)
-    setLoading(true)
-    try {
-      const res = await fetch('/api/email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      })
-      if (!res.ok) {
-        throw new Error()
-      }
-      alert('Message sent successfully!')
-    } catch {
-      alert('Something went wrong, please try again later.')
-    }
-    setLoading(false)
-  }
 
   return (
     <Section
@@ -55,16 +33,18 @@ export default function Contact() {
       <p>Contact Pawsitive Pet Care today</p>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          action="mailto:info.pawsitivepetcare@gmail.com"
+          method="GET"
+          encType="text/plain"
           className="mt-9 w-full max-w-[474px] space-y-8"
         >
           <FormField
             control={form.control}
-            name="name"
+            name="subject"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Name" {...field} />
+                  <Input placeholder="Your name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -76,7 +56,7 @@ export default function Contact() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Email" {...field} />
+                  <Input placeholder="Your email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -85,11 +65,11 @@ export default function Contact() {
 
           <FormField
             control={form.control}
-            name="message"
+            name="body"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Textarea placeholder="Message" {...field} />
+                  <Textarea placeholder="Your message" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -98,11 +78,11 @@ export default function Contact() {
 
           <Button
             type="submit"
+            value="Send"
             variant={'secondary'}
-            disabled={loading}
             className="w-full"
           >
-            {loading ? <Loader2 className="animate-spin" size={24} /> : 'Send'}
+            Send
           </Button>
         </form>
       </Form>
