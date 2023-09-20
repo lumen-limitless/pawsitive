@@ -9,10 +9,13 @@ import { Section } from './ui/section'
 
 export default function Landing() {
   return (
-    <Section id="home" className="mt-[100px] px-5 py-20">
+    <Section
+      id="home"
+      className="mt-[100px] flex-col overflow-x-clip px-5 pb-20 pt-20 lg:pb-0"
+    >
       <div className="mx-auto flex max-w-7xl flex-col-reverse lg:flex-row">
         <div className="mt-6 max-w-3xl space-y-6">
-          <h1 className="text-3xl font-semibold lg:text-6xl">
+          <h1 className="text-2x font-semibold sm:text-3xl lg:text-6xl">
             Caring for your pet like family
           </h1>
           <p className="text-lg">
@@ -37,16 +40,9 @@ export default function Landing() {
             </Link>
           </div>
         </div>
-        <div className="relative h-80 w-80">
-          <Image
-            src={HeroDogIMG}
-            alt=""
-            priority
-            quality={100}
-            fill
-            className="z-20"
-          />
-          <HeroPawSVG className="-rotate-30 absolute inset-0" />
+        <div className="relative">
+          <HeroPawSVG className="-rotate-30 absolute inset-0 -z-[1]" />
+          <Image src={HeroDogIMG} alt="" priority quality={100} />
         </div>
       </div>
     </Section>
