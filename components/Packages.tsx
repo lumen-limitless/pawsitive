@@ -167,7 +167,7 @@ export default function Packages() {
             packages
           </h1>
         </div>
-        <Tabs defaultValue="puppy" className="lg:w-[75%]">
+        <Tabs defaultValue="puppy" className="">
           <TabsList className="mt-5">
             <TabsTrigger value="puppy">Puppy</TabsTrigger>
             <TabsTrigger value="adult">Adult</TabsTrigger>
