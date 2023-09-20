@@ -26,6 +26,7 @@ export default function Contact() {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.debug(values)
     setLoading(true)
     try {
       const res = await fetch('/api/email', {
@@ -35,11 +36,9 @@ export default function Contact() {
         },
         body: JSON.stringify(values),
       })
-
       if (!res.ok) {
         throw new Error()
       }
-
       alert('Message sent successfully!')
     } catch {
       alert('Something went wrong, please try again later.')

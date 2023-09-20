@@ -6,7 +6,7 @@ import Socials from './Socials'
 export default function Footer() {
   return (
     <footer className="bg-[#131334]">
-      <div className="flex w-full flex-col items-center justify-center gap-9 px-5 py-9 lg:flex-row">
+      <div className="flex w-full flex-col items-center justify-center gap-9 px-6 py-9 lg:flex-row">
         <PawsitiveSVG className="h-12" />
 
         <p className="text-center text-sm text-gray-50 lg:mr-auto">
