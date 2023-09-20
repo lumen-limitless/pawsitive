@@ -15,23 +15,23 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 const navigationMenuItems = [
   {
     label: 'Home',
-    href: '/#home',
+    href: '#home',
   },
   {
     label: 'Services',
-    href: '/#services',
+    href: '#services',
   },
   {
     label: 'Packages',
-    href: '/#packages',
+    href: '#packages',
   },
   {
     label: 'About',
-    href: '/#about',
+    href: '#about',
   },
   {
     label: 'Contact',
-    href: '/#contact',
+    href: '#contact',
   },
 ]
 
