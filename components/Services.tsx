@@ -15,7 +15,7 @@ const services = [
   {
     title: 'Drop-in care',
     description:
-      '- One hour of care that can include feedings, playtime, administering medicine, cleaning accidents, and potty breaks.',
+      'One hour of care that can include feedings, playtime, administering medicine, cleaning accidents, and potty breaks.',
   },
   {
     title: 'Dog walking',
@@ -64,7 +64,7 @@ export default function Services() {
           </div>
           <div className="flex items-center">
             <PlusCircleSVG className="h-10" />
-            <p>Yarn clean-up</p>
+            <p>Teeth brushing</p>
           </div>
         </div>
       </div>
