@@ -44,8 +44,19 @@ export default function Services() {
           ))}
         </div>
         <div className="mt-8 flex flex-col items-center gap-3 lg:flex-row">
-          <Button className="w-full lg:w-auto">Schedule appointment</Button>
-          <Link href="service-list.pdf" target="_blank" className="w-full">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+            target="_blank"
+            rel="noreferrer"
+            className="w-full lg:w-auto"
+          >
+            <Button className="w-full lg:w-auto">Schedule appointment</Button>
+          </a>
+          <Link
+            href="service-list.pdf"
+            target="_blank"
+            className="w-full lg:w-auto"
+          >
             <Button variant={'secondary'} className="w-full lg:w-auto">
               View prices <ArrowRight className="ml-2 inline-block" />
             </Button>
