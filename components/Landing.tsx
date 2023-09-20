@@ -15,7 +15,7 @@ export default function Landing() {
     >
       <div className="mx-auto flex max-w-7xl flex-col-reverse lg:flex-row">
         <div className="mt-6 max-w-3xl space-y-6">
-          <h1 className="text-2x font-semibold sm:text-3xl lg:text-6xl">
+          <h1 className="text-3xl font-semibold lg:text-6xl">
             Caring for your pet like family
           </h1>
           <p className="text-lg">
