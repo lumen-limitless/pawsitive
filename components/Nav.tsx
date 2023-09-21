@@ -37,13 +37,13 @@ const navigationMenuItems = [
 
 export function Nav() {
   return (
-    <div className="flex h-[100px] w-full items-center justify-start px-6 md:px-10">
+    <div className="flex h-[100px] items-center px-6 md:px-10">
       <Link href="/">
-        <LogoSVG className="h-12 lg:mr-12" />
+        <LogoSVG className="h-12" />
       </Link>
 
       <NavigationMenu>
-        <NavigationMenuList className="hidden lg:flex">
+        <NavigationMenuList className="ml-12 hidden lg:flex">
           {navigationMenuItems.map((item) => (
             <NavigationMenuItem key={item.label}>
               <NavigationMenuLink

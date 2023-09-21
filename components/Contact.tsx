@@ -27,7 +27,7 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      className="flex-col bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
+      className="flex-col items-center bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
     >
       <h1 className="text-3xl font-semibold">Any questions?</h1>
       <p>Contact Pawsitive Pet Care today</p>

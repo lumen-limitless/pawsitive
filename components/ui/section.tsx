@@ -8,13 +8,7 @@ export const Section: React.FC<SectionProps> = ({
   ...props
 }: SectionProps) => {
   return (
-    <section
-      className={cn(
-        'relative flex h-full w-full flex-grow items-center',
-        className,
-      )}
-      {...props}
-    >
+    <section className={cn('relative flex', className)} {...props}>
       {children}
     </section>
   )
