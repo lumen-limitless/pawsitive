@@ -26,7 +26,7 @@ export default function Header() {
     <header
       id="header"
       className={cn(
-        'fixed z-40 w-full bg-background transition-all duration-300 ease-in-out',
+        'sticky top-0 z-40 w-full bg-background transition-all duration-300 ease-in-out',
         visible ? 'translate-y-0' : '-translate-y-full',
       )}
     >

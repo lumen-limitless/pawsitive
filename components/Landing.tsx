@@ -11,7 +11,7 @@ export default function Landing() {
   return (
     <Section
       id="home"
-      className="mt-[100px] flex-col overflow-x-clip px-5 pb-20 pt-20 lg:pb-0"
+      className="flex-col overflow-x-clip px-5 pb-20 pt-20 lg:pb-0"
     >
       <div className="mx-auto flex max-w-7xl flex-col-reverse lg:flex-row">
         <div className="mt-6 max-w-3xl space-y-6">
