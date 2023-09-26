@@ -15,7 +15,7 @@ const features = [
     illustration: <FlowerSVG className="h-32" />,
     title: 'Peace of mind',
     description:
-      'Enjoy hassle-free pet care with online scheduling, home delivery, and other convenient services.',
+      'Enjoy hassle-free pet care with online scheduling and other convenient services.',
   },
   {
     illustration: <StarSVG className="h-32" />,

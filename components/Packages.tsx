@@ -53,9 +53,8 @@ const puppyPackages = [
     price: '$220',
     duration: '/6 sessions',
     includes: [
-      'Skills: sit, lay down, come, place, touch',
+      'Skills: sit, stay, lay down, come, place, touch',
       'Potty and crate training',
-      'Enrichment activity',
     ],
     excludes: ['+5 drop-in visits', '+25% off overnight pet sitting'],
     cta: 'Schedule traditional training',
@@ -65,7 +64,7 @@ const puppyPackages = [
     price: '$335',
     duration: '/6 sessions',
     includes: [
-      'Skills: sit, lay down, come, place, touch',
+      'Skills: sit, stay, lay down, come, place, touch',
       'Potty and crate training',
       'Enrichment activity',
       '+5 drop-in visits',
@@ -78,10 +77,10 @@ const puppyPackages = [
     price: '$500',
     duration: '/8 sessions',
     includes: [
-      'Skills: sit, lay down, come, place, touch',
+      'Skills: sit, stay, lay down, come, place, touch, heel',
       'Potty and crate training',
       'Enrichment activity',
-      '+5 drop-in visits',
+      '+8 drop-in visits',
       '+25% off overnight pet sitting',
     ],
     excludes: [],

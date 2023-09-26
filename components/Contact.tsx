@@ -1,6 +1,4 @@
 'use client'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import Socials from './Socials'
@@ -19,10 +17,7 @@ export const formSchema = z.object({
 })
 
 export default function Contact() {
-  const router = useRouter()
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-  })
+  const form = useForm<z.infer<typeof formSchema>>()
 
   return (
     <Section
