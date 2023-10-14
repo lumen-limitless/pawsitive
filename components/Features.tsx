@@ -28,11 +28,11 @@ const features = [
 export default function Features() {
   return (
     <Section id="features" className="bg-primary/10 px-5 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-[100px] lg:flex-row">
+      <div className="container flex flex-col items-center gap-[100px] lg:flex-row">
         {features.map((feature, i) => (
           <div
             key={i}
-            className="flex max-w-[394px] flex-col items-center text-center "
+            className="flex max-w-[394px] flex-col items-center text-center"
           >
             {feature.illustration}
             <h2 className="mt-2 text-2xl font-semibold">{feature.title}</h2>

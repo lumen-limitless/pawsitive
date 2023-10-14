@@ -10,9 +10,9 @@ export default function About() {
         <div className="max-w-[631px] space-y-4">
           <h1 className="text-3xl font-semibold">About us</h1>
 
-          <div className="flex gap-1">
-            <p className="text-2xl text-primary">Amanda</p>
-            <span className="text-2xl">CEO</span>
+          <div className="flex gap-1 text-2xl font-semibold">
+            <h2 className="text-[#532BA8]">Amanda</h2>
+            <span className="text-[#CCBBF2]">CEO</span>
           </div>
 
           <div className="flex flex-col items-start justify-center gap-3">
@@ -67,7 +67,7 @@ export default function About() {
             <pattern id="pattern1" width="100%" height="100%">
               <image
                 id="image1_18_6548"
-                xlinkHref="about.jpeg"
+                xlinkHref="about.webp"
                 width="100%"
                 height="100%"
                 preserveAspectRatio="xMidYMid slice"

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 240 75% 98%;
     --foreground: 210, 10%, 20%;
 
     --muted: 259 80% 90%;
@@ -83,7 +83,9 @@
 
   body {
     @apply flex min-h-screen touch-manipulation flex-col bg-background text-foreground antialiased;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
     text-rendering: optimizeLegibility;
   }
 

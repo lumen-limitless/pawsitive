@@ -67,7 +67,7 @@ export default function Training() {
                   id="image0_39_11182"
                   width="100%"
                   height="100%"
-                  xlinkHref="training-dog.jpg"
+                  xlinkHref="training-dog.webp"
                   preserveAspectRatio="xMidYMid slice"
                 />
               </pattern>
@@ -75,7 +75,7 @@ export default function Training() {
           </svg>
           <div className="space-y-6">
             {' '}
-            <h1 className="space-y-6 text-3xl font-semibold text-primary">
+            <h1 className="space-y-6 text-3xl font-semibold text-grape lg:text-5xl">
               Pawsitive Reinforcement dog training
             </h1>
             <p>

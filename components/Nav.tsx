@@ -37,7 +37,7 @@ const navigationMenuItems = [
 
 export function Nav() {
   return (
-    <div className="flex h-[100px] items-center px-6 md:px-10">
+    <div className="container flex h-[100px] items-center">
       <Link href="/">
         <LogoSVG className="h-12" />
       </Link>
@@ -57,13 +57,15 @@ export function Nav() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Button className="ml-auto hidden lg:block">Book an appointment</Button>
-      </a>
+      <Button className="ml-auto hidden lg:inline-flex" asChild>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Book an appointment
+        </a>
+      </Button>
 
       <Sheet>
         <SheetTrigger asChild className="ml-auto lg:hidden">
