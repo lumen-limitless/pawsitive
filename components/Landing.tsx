@@ -11,8 +11,8 @@ export default function Landing() {
   return (
     <Section id="home" className="flex-col overflow-x-clip pb-20 lg:pb-0">
       <div className="container flex flex-col-reverse lg:flex-row">
-        <div className="flex max-w-3xl flex-grow flex-col items-center justify-center space-y-6">
-          <h1 className="text-3xl font-semibold lg:text-6xl">
+        <div className="flex max-w-3xl flex-grow flex-col items-center justify-center gap-6">
+          <h1 className="mt-6 break-words text-[32px]/[44px] font-semibold lg:mt-0 lg:text-6xl">
             Caring for your pet like family
           </h1>
           <p className="text-lg">
