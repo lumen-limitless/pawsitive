@@ -71,45 +71,10 @@
 }
 
 @layer base {
-  html {
-    @apply scroll-smooth;
+  * {
+    @apply border-border;
   }
-
-  *,
-  *::before,
-  *::after {
-    @apply box-border border-border;
-  }
-
   body {
-    @apply flex min-h-screen touch-manipulation flex-col bg-background text-foreground antialiased;
-    font-feature-settings:
-      'rlig' 1,
-      'calt' 1;
-    text-rendering: optimizeLegibility;
-  }
-
-  main {
-    @apply flex flex-grow flex-col;
-  }
-
-  footer {
-    @apply block;
-  }
-
-  /* width */
-  ::-webkit-scrollbar {
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-background text-foreground;
   }
 }
