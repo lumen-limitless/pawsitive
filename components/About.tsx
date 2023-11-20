@@ -2,6 +2,7 @@
 import { BriefcaseIcon, DogIcon } from 'lucide-react'
 import { Badge } from './ui/badge'
 import { Section } from './ui/section'
+import { Separator } from './ui/separator'
 
 export default function About() {
   return (
@@ -10,12 +11,16 @@ export default function About() {
         <div className="max-w-[631px] space-y-4">
           <h1 className="text-3xl font-semibold">About us</h1>
 
-          <div className="flex gap-1 text-2xl font-semibold">
-            <h2 className="text-[#532BA8]">Amanda</h2>
-            <span className="text-[#CCBBF2]">CEO</span>
+          <div className="flex h-6 items-center gap-1 text-2xl font-semibold">
+            <h2 className="text-grape">Amanda</h2>
+            <Separator
+              orientation="vertical"
+              className="bg-black bg-foreground"
+            />
+            <span className="text-[#CCBBF2]">Founder</span>
           </div>
 
-          <div className="flex flex-col items-start justify-center gap-3">
+          <div className="flex items-center justify-start gap-3">
             <Badge variant={'secondary'}>
               {' '}
               <BriefcaseIcon className="mr-1" /> Professional pet care provider
