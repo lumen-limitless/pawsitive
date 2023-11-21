@@ -69,7 +69,7 @@ export function Nav() {
       </Button>
 
       <Sheet>
-        <SheetTrigger asChild className="ml-auto lg:hidden">
+        <SheetTrigger className="ml-auto lg:hidden">
           <MenuIcon />
           <span className="sr-only">Menu</span>
         </SheetTrigger>
