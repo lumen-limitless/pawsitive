@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { cn } from '@/lib/utils'
+import { Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import Analytics from './analytics'
 import './globals.css'
@@ -13,6 +14,10 @@ const poppins = Poppins({
 
 export const metadata = defaultMetadata
 
+export const viewport: Viewport = {
+  themeColor: 'hsl(240 75% 98%)',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -23,6 +28,8 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f2da8" />
+        <meta name="msapplication-TileColor" content="#603cba" />
       </head>
 
       <body

@@ -40,6 +40,7 @@ export function Nav() {
     <div className="container flex h-[100px] items-center">
       <Link href="/">
         <LogoSVG className="h-12" />
+        <span className="sr-only">Pawsitive Pet Care Homepage</span>
       </Link>
 
       <NavigationMenu>
@@ -70,6 +71,7 @@ export function Nav() {
       <Sheet>
         <SheetTrigger asChild className="ml-auto lg:hidden">
           <MenuIcon />
+          <span className="sr-only">Menu</span>
         </SheetTrigger>
         <SheetContent
           className="flex h-screen w-screen items-center justify-center"

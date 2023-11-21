@@ -5,10 +5,12 @@ export default function Socials() {
     <div className="flex items-center justify-center gap-9 text-white">
       <a href="tel:+1-585-210-2385">
         <PhoneIcon />
+        <span className="sr-only">phone</span>
       </a>
 
       <a href="mailto:info.pawsitivepetcare@gmail.com">
         <MailIcon />
+        <span className="sr-only">e-mail</span>
       </a>
 
       <a
@@ -17,6 +19,7 @@ export default function Socials() {
         rel="noopener noreferrer"
       >
         <FacebookIcon />
+        <span className="sr-only">facebook</span>
       </a>
 
       <a
@@ -25,6 +28,7 @@ export default function Socials() {
         rel="noopener noreferrer"
       >
         <InstagramIcon />
+        <span className="sr-only">instagram</span>
       </a>
     </div>
   )

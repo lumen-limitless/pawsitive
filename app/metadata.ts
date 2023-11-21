@@ -1,5 +1,13 @@
-import { APP_DESCRIPTION, APP_NAME, APP_URL } from '@/lib/constants'
+import { APP_DESCRIPTION } from '@/lib/constants'
 import { type Metadata } from 'next'
+
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'Pawsitive Pet Care'
+
+const baseUrl = process.env.NEXT_PUBLIC_APP_URL
+  ? `https://${process.env.NEXT_PUBLIC_APP_URL}`
+  : process.env.NEXT_PUBLIC_VERCEL_URL
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+  : 'http://localhost:3000'
 
 export const defaultMetadata: Metadata = {
   title: {
@@ -9,8 +17,7 @@ export const defaultMetadata: Metadata = {
   },
   applicationName: APP_NAME,
   description: APP_DESCRIPTION,
-  themeColor: 'hsl(240 75% 98%)',
-  metadataBase: new URL(APP_URL),
+  metadataBase: new URL(baseUrl),
   generator: 'Next.js',
   keywords: [
     'dogs',
@@ -39,11 +46,11 @@ export const defaultMetadata: Metadata = {
     'pet care advice',
     'pet care information',
   ],
-  manifest: null,
+  manifest: '/manifest.json',
 
   openGraph: {
     type: 'website',
-    url: APP_URL,
+    url: baseUrl,
     siteName: APP_NAME,
     title: APP_NAME,
     description: APP_DESCRIPTION,
@@ -52,14 +59,14 @@ export const defaultMetadata: Metadata = {
 
   twitter: {
     title: APP_NAME,
-    site: APP_URL,
+    site: baseUrl,
     creator: '@LumenLimitless',
     description: APP_DESCRIPTION,
     card: 'summary_large_image',
   },
 
   appleWebApp: {
-    statusBarStyle: 'black-translucent',
+    statusBarStyle: 'default',
     title: APP_NAME,
     capable: false,
   },
@@ -67,6 +74,10 @@ export const defaultMetadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 
   formatDetection: {
