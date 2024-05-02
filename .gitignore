@@ -39,3 +39,6 @@ firebase.json
 
 # typescript
 *.tsbuildinfo
+
+# Sentry Config File
+.sentryclirc
