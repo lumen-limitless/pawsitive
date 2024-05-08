@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   NavigationMenu,
@@ -6,12 +6,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-import { MenuIcon } from 'lucide-react'
-import Link from 'next/link'
-import LogoSVG from 'public/logo.svg'
-import { Button } from './ui/button'
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+} from '@/components/ui/navigation-menu';
+import { MenuIcon } from 'lucide-react';
+import Link from 'next/link';
+import LogoSVG from 'public/logo.svg';
+import { Button } from './ui/button';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 const navigationMenuItems = [
   {
     label: 'Home',
@@ -33,7 +33,7 @@ const navigationMenuItems = [
     label: 'Contact',
     href: '#contact',
   },
-]
+];
 
 export function Nav() {
   return (
@@ -85,9 +85,19 @@ export function Nav() {
                 </SheetTrigger>
               </Link>
             ))}
+
+            <Button asChild>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Book an appointment
+              </a>
+            </Button>
           </div>
         </SheetContent>
       </Sheet>
     </div>
-  )
+  );
 }

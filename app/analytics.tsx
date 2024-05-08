@@ -1,13 +1,11 @@
-'use client'
+'use client';
 
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
-import { GoogleAnalytics } from 'nextjs-google-analytics'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 
 export default function Analytics() {
   return (
     <>
-      <GoogleAnalytics trackPageViews />
       <VercelAnalytics />
     </>
-  )
+  );
 }

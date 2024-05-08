@@ -40,11 +40,11 @@ export default function About() {
             <p>
               My professional experience in pet care started in 2019 as a Pack
               Leader at a local doggie daycare. In 2021, I resigned from my then
-              position as an Assistant Manager
+              position as an Assistant Manager to pursue education in Positive
+              Reinforcement Dog Training.
             </p>
             <br />
             <p>
-              to pursue education in Positive Reinforcement Dog Training.
               Finally in early 2022, I was able to work full time as a
               Professional Pet Care Provider and Dog Trainer for my company
               Pawsitive Pet Care. I have been certified for Cat and Dog CPR and
