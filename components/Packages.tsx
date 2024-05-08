@@ -1,14 +1,13 @@
-'use client'
+'use client';
 
-import { Tabs } from '@radix-ui/react-tabs'
-import Link from 'next/link'
-import CheckSVG from 'public/check.svg'
-import DoubleStarSVG from 'public/double-star.svg'
-import { Button } from './ui/button'
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card'
-import { Section } from './ui/section'
-import { Separator } from './ui/separator'
-import { TabsContent, TabsList, TabsTrigger } from './ui/tabs'
+import { Tabs } from '@radix-ui/react-tabs';
+import Link from 'next/link';
+import CheckSVG from 'public/check.svg';
+import DoubleStarSVG from 'public/double-star.svg';
+import { Button } from './ui/button';
+import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
+import { Separator } from './ui/separator';
+import { TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 
 const puppyTrainingOptions = [
   {
@@ -45,7 +44,7 @@ const puppyTrainingOptions = [
     description:
       'Six sessions of training includes skills such as Sit, Stay, Down, Place, Touch, Heel, and Leave-it.',
   },
-]
+];
 
 const puppyPackages = [
   {
@@ -86,7 +85,7 @@ const puppyPackages = [
     excludes: [],
     cta: 'Schedule ultimate training',
   },
-]
+];
 
 const adultPackages = [
   {
@@ -115,7 +114,7 @@ const adultPackages = [
     excludes: ['+25% off overnight pet sitting'],
     cta: 'Schedule premium training',
   },
-]
+];
 
 const Breadcrumb = ({ selected }: { selected: boolean }) => {
   return (
@@ -151,15 +150,15 @@ const Breadcrumb = ({ selected }: { selected: boolean }) => {
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 export default function Packages() {
   return (
     <>
-      <Section
+      <section
         id="packages"
-        className="flex-col items-center bg-[#804DEC]/10 px-5 py-12"
+        className="flex flex-col items-center bg-[#804DEC]/10 px-5 py-12"
       >
         <div className="relative">
           <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
@@ -273,7 +272,7 @@ export default function Packages() {
         >
           <Button variant={'secondary'}>Complete package list</Button>
         </Link>
-      </Section>
+      </section>
     </>
-  )
+  );
 }

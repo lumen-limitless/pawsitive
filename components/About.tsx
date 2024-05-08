@@ -1,12 +1,11 @@
-'use client'
-import { BriefcaseIcon, DogIcon } from 'lucide-react'
-import { Badge } from './ui/badge'
-import { Section } from './ui/section'
-import { Separator } from './ui/separator'
+'use client';
+import { BriefcaseIcon, DogIcon } from 'lucide-react';
+import { Badge } from './ui/badge';
+import { Separator } from './ui/separator';
 
 export default function About() {
   return (
-    <Section id="about" className="bg-[#CCBBF2]/10 px-5 py-12">
+    <section id="about" className="flex bg-[#CCBBF2]/10 px-5 py-12">
       <div className="mx-auto flex w-full max-w-7xl flex-col lg:flex-row lg:gap-[120px]">
         <div className="max-w-[631px] space-y-4">
           <h1 className="text-3xl font-semibold">About us</h1>
@@ -81,6 +80,6 @@ export default function About() {
           </defs>
         </svg>
       </div>
-    </Section>
-  )
+    </section>
+  );
 }

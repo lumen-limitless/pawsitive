@@ -1,11 +1,10 @@
-'use client'
-import { ArrowRight } from 'lucide-react'
-import Link from 'next/link'
-import PawCircleSVG from 'public/paw-circle.svg'
-import PlusCircleSVG from 'public/plus-circle.svg'
-import { Button } from './ui/button'
-import { Section } from './ui/section'
-import { Separator } from './ui/separator'
+'use client';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import PawCircleSVG from 'public/paw-circle.svg';
+import PlusCircleSVG from 'public/plus-circle.svg';
+import { Button } from './ui/button';
+import { Separator } from './ui/separator';
 
 const services = [
   {
@@ -28,11 +27,11 @@ const services = [
     description:
       'This service includes your pet care provider picking up your dog(s) and taking them to a local hiking trail. One hour of walking and exploring.',
   },
-]
+];
 
 export default function Services() {
   return (
-    <Section id="services" className="px-5 py-12 md:py-[120px] ">
+    <section id="services" className="flex px-5 py-12 md:py-[120px] ">
       <div className="container flex w-full flex-col">
         <h1 className="text-4xl font-semibold md:text-5xl">Services</h1>
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -81,6 +80,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </Section>
-  )
+    </section>
+  );
 }

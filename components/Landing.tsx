@@ -1,15 +1,14 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
-import Link from 'next/link'
-import HeroDogIMG from 'public/hero-dog.webp'
-import HeroPawSVG from 'public/hero-paw.svg'
-import { Button } from './ui/button'
-import { Section } from './ui/section'
+import Image from 'next/image';
+import Link from 'next/link';
+import HeroDogIMG from 'public/hero-dog.webp';
+import HeroPawSVG from 'public/hero-paw.svg';
+import { Button } from './ui/button';
 
 export default function Landing() {
   return (
-    <Section id="home" className="flex-col overflow-x-clip pb-20 lg:pb-0">
+    <section id="home" className="flex flex-col overflow-x-clip pb-20 lg:pb-0">
       <div className="container flex flex-col-reverse lg:flex-row">
         <div className="flex max-w-3xl flex-grow flex-col items-center justify-center gap-6">
           <h1 className="mt-6 break-words text-[32px]/[44px] font-semibold lg:mt-0 lg:text-6xl">
@@ -42,6 +41,6 @@ export default function Landing() {
           <Image src={HeroDogIMG} alt="" priority quality={100} />
         </div>
       </div>
-    </Section>
-  )
+    </section>
+  );
 }

@@ -1,27 +1,28 @@
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import { cn } from '@/lib/utils'
-import { Viewport } from 'next'
-import { Poppins } from 'next/font/google'
-import Analytics from './analytics'
-import './globals.css'
-import { defaultMetadata } from './metadata'
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import { Toaster } from '@/components/ui/sonner';
+import { cn } from '@/lib/utils';
+import { Viewport } from 'next';
+import { Poppins } from 'next/font/google';
+import Analytics from './analytics';
+import './globals.css';
+import { defaultMetadata } from './metadata';
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-})
+});
 
-export const metadata = defaultMetadata
+export const metadata = defaultMetadata;
 
 export const viewport: Viewport = {
   themeColor: 'hsl(240 75% 98%)',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -53,8 +54,10 @@ export default function RootLayout({
 
         <Footer />
 
+        <Toaster />
+
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

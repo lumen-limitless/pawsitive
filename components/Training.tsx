@@ -1,10 +1,9 @@
-'use client'
-import { Section } from './ui/section'
+'use client';
 
 export default function Training() {
   return (
     <>
-      <Section className=" bg-[#CCBBF2]/10 px-5 py-12">
+      <section className=" flex bg-[#CCBBF2]/10 px-5 py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 lg:flex-row">
           <svg
             viewBox="0 0 360 280"
@@ -85,7 +84,7 @@ export default function Training() {
             </p>
           </div>
         </div>
-      </Section>
+      </section>
     </>
-  )
+  );
 }

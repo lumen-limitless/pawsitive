@@ -1,89 +1,98 @@
-'use client'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import Socials from './Socials'
-import { Button } from './ui/button'
-import { Form, FormControl, FormField, FormItem, FormMessage } from './ui/form'
-import { Input } from './ui/input'
-import { Section } from './ui/section'
-import { Textarea } from './ui/textarea'
-
-export const formSchema = z.object({
-  subject: z.string().min(2, { message: 'Name must be at least 2 characters' }),
-  email: z.string().email({ message: 'Invalid email address' }),
-  body: z
-    .string()
-    .min(10, { message: 'Message must be at least 10 characters' }),
-})
+'use client';
+import { submitContactFormAction } from '@/lib/actions';
+import { Check, Loader2, X } from 'lucide-react';
+import { useFormStatus } from 'react-dom';
+import { toast } from 'sonner';
+import Socials from './Socials';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
 
 export default function Contact() {
-  const form = useForm<z.infer<typeof formSchema>>()
+  const handleSubmit = async (formData: FormData) => {
+    return submitContactFormAction(formData).then(({ success }) => {
+      if (success) {
+        toast(
+          <>
+            <Check className="mr-2 h-4 w-4 text-green-500" />{' '}
+            <p>Message sent!</p>
+          </>,
+        );
+      } else {
+        toast(
+          <>
+            <X className="mr-2 h-4 w-4 text-red-500" />{' '}
+            <p>Message failed to send</p>
+          </>,
+        );
+      }
+    });
+  };
 
   return (
-    <Section
+    <section
       id="contact"
-      className="flex-col items-center bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
+      className="flex flex-col items-center bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
     >
       <h1 className="text-3xl font-semibold">Any questions?</h1>
       <p>Contact Pawsitive Pet Care today</p>
-      <Form {...form}>
-        <form
-          action="mailto:info.pawsitivepetcare@gmail.com"
-          method="GET"
-          encType="text/plain"
-          className="mt-9 w-full max-w-[474px] space-y-8"
-        >
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Your name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Your email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
 
-          <FormField
-            control={form.control}
-            name="body"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Textarea placeholder="Your message" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+      <form
+        action={handleSubmit}
+        className="mt-9 w-full max-w-[474px] space-y-8"
+      >
+        <Input
+          name="name"
+          id="name"
+          placeholder="Name"
+          type="text"
+          min={2}
+          required
+        />
+        <Input
+          name="email"
+          id="email"
+          placeholder="Email"
+          type="email"
+          required
+        />
+        <Input
+          name="subject"
+          id="subject"
+          min={2}
+          placeholder="Subject"
+          type="text"
+          required
+        />
+        <Textarea
+          name="body"
+          id="body"
+          placeholder="Message"
+          required
+          minLength={10}
+        />
 
-          <Button
-            type="submit"
-            value="Send"
-            variant={'secondary'}
-            className="w-full"
-          >
-            Send
-          </Button>
-        </form>
-      </Form>
+        <SubmitButton />
+      </form>
       <div className="mt-9">
         <Socials />
       </div>
-    </Section>
-  )
+    </section>
+  );
 }
+
+const SubmitButton: React.FC = () => {
+  const { pending } = useFormStatus();
+  return (
+    <Button
+      type="submit"
+      value="Send"
+      variant={'secondary'}
+      className="w-full"
+      disabled={pending}
+      aria-busy={pending}
+    >
+      {pending ? <Loader2 className="animate-spin" /> : 'Send'}
+    </Button>
+  );
+};

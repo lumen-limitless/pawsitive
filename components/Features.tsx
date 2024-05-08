@@ -1,8 +1,7 @@
-'use client'
-import { Section } from '@/components/ui/section'
-import FlowerSVG from 'public/flower.svg'
-import HeartSVG from 'public/heart.svg'
-import StarSVG from 'public/star.svg'
+'use client';
+import FlowerSVG from 'public/flower.svg';
+import HeartSVG from 'public/heart.svg';
+import StarSVG from 'public/star.svg';
 
 const features = [
   {
@@ -23,11 +22,11 @@ const features = [
     description:
       'Get professional advice and guidance on all aspects of pet care, from nutrition to behavior.',
   },
-]
+];
 
 export default function Features() {
   return (
-    <Section id="features" className="bg-primary/10 px-5 py-12">
+    <section id="features" className="flex bg-primary/10 px-5 py-12">
       <div className="container flex flex-col items-center gap-[100px] lg:flex-row">
         {features.map((feature, i) => (
           <div
@@ -40,6 +39,6 @@ export default function Features() {
           </div>
         ))}
       </div>
-    </Section>
-  )
+    </section>
+  );
 }
