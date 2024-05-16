@@ -1,7 +1,6 @@
 'use client';
 import { BriefcaseIcon, DogIcon } from 'lucide-react';
 import { Badge } from './ui/badge';
-import { Separator } from './ui/separator';
 
 export default function About() {
   return (
@@ -12,10 +11,6 @@ export default function About() {
 
           <div className="flex h-6 items-center gap-1 text-2xl font-semibold">
             <h2 className="text-grape">Amanda</h2>
-            <Separator
-              orientation="vertical"
-              className="bg-black bg-foreground"
-            />
             <span className="text-[#CCBBF2]">Founder</span>
           </div>
 

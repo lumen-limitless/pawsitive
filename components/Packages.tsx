@@ -156,122 +156,121 @@ const Breadcrumb = ({ selected }: { selected: boolean }) => {
 export default function Packages() {
   return (
     <>
-      <section
-        id="packages"
-        className="flex flex-col items-center bg-[#804DEC]/10 px-5 py-12"
-      >
-        <div className="relative">
-          <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
+      <section id="packages" className="bg-[#804DEC]/10 px-5 py-12">
+        <div className="container flex flex-col items-center">
+          <div className="relative">
+            <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
 
-          <h1 className="text-center text-3xl font-bold">
-            Prices & <br className="lg:hidden" />
-            packages
-          </h1>
+            <h1 className="text-center text-3xl font-bold">
+              Prices & <br className="lg:hidden" />
+              packages
+            </h1>
+          </div>
+          <Tabs defaultValue="puppy" className="">
+            <TabsList className="mt-5">
+              <TabsTrigger value="puppy">Puppy</TabsTrigger>
+              <TabsTrigger value="adult">Adult</TabsTrigger>
+            </TabsList>
+            <TabsContent
+              value="puppy"
+              className="flex w-full max-w-7xl flex-col justify-center gap-6 lg:flex-row"
+            >
+              {puppyPackages.map((item, i) => (
+                <Card key={i}>
+                  <CardHeader>
+                    <h2 className="text-lg font-bold text-primary">
+                      {item.title}
+                    </h2>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div>
+                      <strong className="text-2xl font-extrabold">
+                        {item.price}
+                      </strong>
+                      <span className="text-opacity-80">{item.duration}</span>
+                    </div>
+
+                    <Separator className="my-4" />
+
+                    <div>
+                      <ul className="list-inside space-y-3">
+                        {item.includes.map((include, i) => (
+                          <li key={i} className="flex items-center">
+                            {' '}
+                            <CheckSVG className="mr-2 h-5 w-5 text-primary" />{' '}
+                            {include}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="mt-4 justify-center">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button variant="secondary">{item.cta}</Button>
+                    </a>
+                  </CardFooter>
+                </Card>
+              ))}
+            </TabsContent>
+            <TabsContent
+              value="adult"
+              className="flex w-full max-w-7xl flex-col justify-center gap-6 lg:flex-row"
+            >
+              {adultPackages.map((item, i) => (
+                <Card key={i}>
+                  <CardHeader>
+                    <h2 className="text-lg font-bold text-primary">
+                      {item.title}
+                    </h2>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div>
+                      <strong className="text-2xl font-extrabold">
+                        {item.price}
+                      </strong>
+                      <span className="text-opacity-80">{item.duration}</span>
+                    </div>
+
+                    <Separator className="my-4" />
+
+                    <div>
+                      <ul className="list-inside space-y-3">
+                        {item.includes.map((include, i) => (
+                          <li key={i} className="flex items-center">
+                            <CheckSVG className="mr-2 h-5 w-5 text-primary" />
+                            {include}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="mt-4 justify-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform">
+                      <Button variant="secondary">{item.cta}</Button>
+                    </a>
+                  </CardFooter>
+                </Card>
+              ))}
+            </TabsContent>
+          </Tabs>
+
+          <Link
+            href="service-list.pdf"
+            className="mt-12"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Button variant={'secondary'}>Complete package list</Button>
+          </Link>
         </div>
-        <Tabs defaultValue="puppy" className="">
-          <TabsList className="mt-5">
-            <TabsTrigger value="puppy">Puppy</TabsTrigger>
-            <TabsTrigger value="adult">Adult</TabsTrigger>
-          </TabsList>
-          <TabsContent
-            value="puppy"
-            className="flex w-full max-w-7xl flex-col justify-center gap-6 lg:flex-row"
-          >
-            {puppyPackages.map((item, i) => (
-              <Card key={i}>
-                <CardHeader>
-                  <h2 className="text-lg font-bold text-primary">
-                    {item.title}
-                  </h2>
-                </CardHeader>
-
-                <CardContent>
-                  <div>
-                    <strong className="text-2xl font-extrabold">
-                      {item.price}
-                    </strong>
-                    <span className="text-opacity-80">{item.duration}</span>
-                  </div>
-
-                  <Separator className="my-4" />
-
-                  <div>
-                    <ul className="list-inside space-y-3">
-                      {item.includes.map((include, i) => (
-                        <li key={i} className="flex items-center">
-                          {' '}
-                          <CheckSVG className="mr-2 h-5 w-5 text-primary" />{' '}
-                          {include}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-
-                <CardFooter className="mt-4 justify-center">
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Button variant="secondary">{item.cta}</Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            ))}
-          </TabsContent>
-          <TabsContent
-            value="adult"
-            className="flex w-full max-w-7xl flex-col justify-center gap-6 lg:flex-row"
-          >
-            {adultPackages.map((item, i) => (
-              <Card key={i}>
-                <CardHeader>
-                  <h2 className="text-lg font-bold text-primary">
-                    {item.title}
-                  </h2>
-                </CardHeader>
-
-                <CardContent>
-                  <div>
-                    <strong className="text-2xl font-extrabold">
-                      {item.price}
-                    </strong>
-                    <span className="text-opacity-80">{item.duration}</span>
-                  </div>
-
-                  <Separator className="my-4" />
-
-                  <div>
-                    <ul className="list-inside space-y-3">
-                      {item.includes.map((include, i) => (
-                        <li key={i} className="flex items-center">
-                          <CheckSVG className="mr-2 h-5 w-5 text-primary" />
-                          {include}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-
-                <CardFooter className="mt-4 justify-center">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZjeY3eyTWUFIspFDHYJ-8zMeKA09ms8oJTrhtAPoiyf4kaQ/viewform">
-                    <Button variant="secondary">{item.cta}</Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            ))}
-          </TabsContent>
-        </Tabs>
-
-        <Link
-          href="service-list.pdf"
-          className="mt-12"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <Button variant={'secondary'}>Complete package list</Button>
-        </Link>
       </section>
     </>
   );

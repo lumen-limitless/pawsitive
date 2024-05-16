@@ -8,11 +8,15 @@ import { Button } from './ui/button';
 
 export default function Landing() {
   return (
-    <section id="home" className="flex flex-col overflow-x-clip pb-20 lg:pb-0">
-      <div className="container flex flex-col-reverse lg:flex-row">
-        <div className="flex max-w-3xl flex-grow flex-col items-center justify-center gap-6">
+    <section id="home" className="relative overflow-clip">
+      <div className="container flex flex-col-reverse items-center lg:block">
+        <div
+          className="mb-12 mt-0 flex flex-grow flex-col gap-6 md:mb-20 lg:mt-20 lg:max-w-[445px] xl:my-[120px] xl:max-w-[530px] 2xl:my-[164px] 2xl:max-w-[620px]"
+          id="hero-content"
+        >
           <h1 className="mt-6 break-words text-[32px]/[44px] font-semibold lg:mt-0 lg:text-6xl">
-            Caring for your pet like family
+            Caring for your <br className="hidden lg:block" />
+            pet like family
           </h1>
           <p className="text-lg">
             We treat your furry friend like one of our own, providing
@@ -36,9 +40,14 @@ export default function Landing() {
             </Link>
           </div>
         </div>
-        <div className="relative">
-          <HeroPawSVG className="-rotate-30 absolute inset-0 -z-[1]" />
-          <Image src={HeroDogIMG} alt="" priority quality={100} />
+        <div
+          className="bottom-0 left-[52%] -z-[1] lg:absolute lg:max-w-[445px]  xl:max-w-[530px] 2xl:max-w-[620px]"
+          id="hero-image"
+        >
+          <div className="relative">
+            <HeroPawSVG className="absolute -inset-x-6 bottom-0 -z-[1] lg:-inset-x-12" />
+            <Image src={HeroDogIMG} alt="" priority quality={100} />
+          </div>
         </div>
       </div>
     </section>
