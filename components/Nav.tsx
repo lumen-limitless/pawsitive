@@ -37,7 +37,7 @@ const navigationMenuItems = [
 
 export function Nav() {
   return (
-    <div className="flex h-[100px] items-center px-10">
+    <div className="flex h-[100px] items-center px-6 lg:px-10">
       <Link href="/">
         <LogoSVG className="h-12" />
         <span className="sr-only">Pawsitive Pet Care Homepage</span>
