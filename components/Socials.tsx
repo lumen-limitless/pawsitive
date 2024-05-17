@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon } from 'lucide-react'
+import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon } from 'lucide-react';
 
 export default function Socials() {
   return (
@@ -31,5 +31,5 @@ export default function Socials() {
         <span className="sr-only">instagram</span>
       </a>
     </div>
-  )
+  );
 }

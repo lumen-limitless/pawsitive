@@ -5,7 +5,7 @@ import { Badge } from './ui/badge';
 export default function About() {
   return (
     <section id="about" className="flex bg-[#CCBBF2]/10 px-5 py-12">
-      <div className="mx-auto flex w-full max-w-7xl flex-col lg:flex-row lg:gap-[120px]">
+      <div className="container flex flex-col lg:flex-row lg:gap-[120px]">
         <div className="max-w-[631px] space-y-4">
           <h1 className="text-3xl font-semibold">About us</h1>
 

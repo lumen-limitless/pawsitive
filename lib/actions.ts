@@ -4,16 +4,16 @@ import { google } from 'googleapis';
 import nodemailer from 'nodemailer';
 import { z } from 'zod';
 
-const formSchema = z.object({
-  name: z.string().min(2),
-  subject: z.string().min(2),
-  email: z.string().min(1).email(),
-  body: z.string().min(10),
-});
-
 export async function submitContactFormAction(
   formData: FormData,
 ): Promise<{ success: boolean }> {
+  const formSchema = z.object({
+    name: z.string().min(2),
+    subject: z.string().min(2),
+    email: z.string().min(1).email(),
+    body: z.string().min(10),
+  });
+
   try {
     const { name, subject, email, body } = formSchema.parse(
       Object.fromEntries(formData),
