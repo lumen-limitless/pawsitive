@@ -34,8 +34,10 @@ export default function Contact() {
       id="contact"
       className="flex flex-col items-center bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
     >
-      <h1 className="text-3xl font-semibold">Any questions?</h1>
-      <p>Contact Pawsitive Pet Care today</p>
+      <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+        Any questions?
+      </h1>
+      <p>Contact Pawsitive Pet Care today.</p>
 
       <form
         action={handleSubmit}
