@@ -33,7 +33,9 @@ export default function Services() {
   return (
     <section id="services" className="flex px-5 py-12 md:py-[120px] ">
       <div className="container flex w-full flex-col">
-        <h1 className="text-4xl font-semibold md:text-5xl">Services</h1>
+        <h1 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
+          Services
+        </h1>
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
           {services.map((service) => (
             <div key={service.title}>
