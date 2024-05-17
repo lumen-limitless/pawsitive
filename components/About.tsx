@@ -4,7 +4,10 @@ import { Badge } from './ui/badge';
 
 export default function About() {
   return (
-    <section id="about" className="flex bg-[#CCBBF2]/10 px-5 py-12">
+    <section
+      id="about"
+      className="xl:py-30 flex bg-[#CCBBF2]/10 py-12 md:py-20"
+    >
       <div className="container flex flex-col lg:flex-row lg:gap-[120px]">
         <div className="max-w-[631px] space-y-4">
           <h1 className="text-3xl font-semibold">About us</h1>
