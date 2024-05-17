@@ -3,11 +3,13 @@ import { type Metadata } from 'next';
 
 const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'Pawsitive Pet Care';
 
-const baseUrl = process.env.NEXT_PUBLIC_APP_URL
-  ? `https://${process.env.NEXT_PUBLIC_APP_URL}`
-  : process.env.NEXT_PUBLIC_VERCEL_URL
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-    : 'http://localhost:3000';
+const baseUrl = new URL(
+  process.env.NEXT_PUBLIC_APP_URL
+    ? `https://${process.env.NEXT_PUBLIC_APP_URL}`
+    : process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : 'http://localhost:3000',
+);
 
 export const defaultMetadata: Metadata = {
   title: {
@@ -17,7 +19,7 @@ export const defaultMetadata: Metadata = {
   },
   applicationName: APP_NAME,
   description: APP_DESCRIPTION,
-  metadataBase: new URL(baseUrl),
+  metadataBase: baseUrl,
   generator: 'Next.js',
   keywords: [
     'dogs',
@@ -59,7 +61,7 @@ export const defaultMetadata: Metadata = {
 
   twitter: {
     title: APP_NAME,
-    site: baseUrl,
+    site: baseUrl.toString(),
     creator: '@LumenLimitless',
     description: APP_DESCRIPTION,
     card: 'summary_large_image',
