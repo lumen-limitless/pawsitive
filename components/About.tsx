@@ -19,7 +19,7 @@ export default function About() {
             <span className="text-[#CCBBF2]">Founder</span>
           </div>
 
-          <div className="flex items-center justify-start gap-3">
+          <div className="flex flex-col items-start justify-start gap-3 lg:flex-row lg:items-center">
             <Badge variant={'secondary'}>
               {' '}
               <BriefcaseIcon className="mr-1" /> Professional pet care provider
