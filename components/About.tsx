@@ -10,7 +10,9 @@ export default function About() {
     >
       <div className="container flex flex-col lg:flex-row lg:gap-[120px]">
         <div className="max-w-[631px] space-y-4">
-          <h1 className="text-3xl font-semibold">About us</h1>
+          <h1 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
+            About us
+          </h1>
 
           <div className="flex h-6 items-center gap-1 text-2xl font-semibold">
             <h2 className="text-grape">Amanda</h2>

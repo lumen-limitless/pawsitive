@@ -164,14 +164,14 @@ export default function Packages() {
           <div className="relative">
             <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
 
-            <h1 className="text-center text-3xl font-bold">
+            <h1 className="text-center text-3xl font-semibold md:text-4xl lg:text-5xl">
               Prices & <br className="lg:hidden" />
               packages
             </h1>
           </div>
           <Tabs
             defaultValue="puppy"
-            className="flex flex-col items-center lg:w-auto"
+            className="flex flex-col items-center lg:mt-12 lg:w-auto"
           >
             <TabsList className="mt-5">
               <TabsTrigger value="puppy">Puppy</TabsTrigger>

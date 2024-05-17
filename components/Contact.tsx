@@ -32,52 +32,54 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center bg-grape px-5 py-12 text-monochrome-50 xl:px-[269px]"
+      className="bg-grape py-12 text-monochrome-50 xl:px-[269px]"
     >
-      <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-        Any questions?
-      </h1>
-      <p>Contact Pawsitive Pet Care today.</p>
+      <div className="container flex flex-col items-center">
+        <h1 className="mb-4 text-3xl font-semibold md:text-4xl lg:text-5xl">
+          Any questions?
+        </h1>
+        <p>Contact Pawsitive Pet Care today.</p>
 
-      <form
-        action={handleSubmit}
-        className="mt-9 w-full max-w-[474px] space-y-8"
-      >
-        <Input
-          name="name"
-          id="name"
-          placeholder="Name"
-          type="text"
-          min={2}
-          required
-        />
-        <Input
-          name="email"
-          id="email"
-          placeholder="Email"
-          type="email"
-          required
-        />
-        <Input
-          name="subject"
-          id="subject"
-          min={2}
-          placeholder="Subject"
-          type="text"
-          required
-        />
-        <Textarea
-          name="body"
-          id="body"
-          placeholder="Message"
-          required
-          minLength={10}
-        />
+        <form
+          action={handleSubmit}
+          className="mt-9 w-full max-w-[474px] space-y-8"
+        >
+          <Input
+            name="name"
+            id="name"
+            placeholder="Name"
+            type="text"
+            min={2}
+            required
+          />
+          <Input
+            name="email"
+            id="email"
+            placeholder="Email"
+            type="email"
+            required
+          />
+          <Input
+            name="subject"
+            id="subject"
+            min={2}
+            placeholder="Subject"
+            type="text"
+            required
+          />
+          <Textarea
+            name="body"
+            id="body"
+            placeholder="Message"
+            required
+            minLength={10}
+          />
 
-        <SubmitButton />
-      </form>
-      <div className="mt-9">
-        <Socials />
+          <SubmitButton />
+        </form>
+        <div className="mt-9">
+          <Socials />
+        </div>
       </div>
     </section>
   );
