@@ -61,13 +61,19 @@ export default function Training() {
               />
             </g>
             <defs>
-              <pattern id="pattern0" width="100%" height="100%">
+              <pattern
+                id="pattern0"
+                patternUnits="userSpaceOnUse"
+                viewBox="0 -15 360 280"
+                width="100%"
+                height="100%"
+              >
                 <image
                   id="image0_39_11182"
                   width="100%"
                   height="100%"
-                  xlinkHref="training-dog.webp"
-                  preserveAspectRatio="xMidYMid slice"
+                  xlinkHref="pawsitive-dog-1.png"
+                  preserveAspectRatio="xMidYMid meet"
                 />
               </pattern>
             </defs>
