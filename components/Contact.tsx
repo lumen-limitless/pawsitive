@@ -86,13 +86,13 @@ const SubmitButton: React.FC = () => {
   return (
     <Button
       type="submit"
-      value="Send"
-      variant={'secondary'}
+      aria-roledescription="submit button for contact form"
       className="w-full"
+      variant={'submit'}
       disabled={pending}
       aria-busy={pending}
     >
-      {pending ? <Loader2 className="animate-spin" /> : 'Send'}
+      {pending ? <Loader2 className="animate-spin" /> : 'Send message'}
     </Button>
   );
 };
