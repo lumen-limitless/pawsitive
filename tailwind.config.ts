@@ -27,12 +27,14 @@ const config = {
         sm: '40px',
         DEFAULT: '40px',
       },
-      // padding: '2rem',
       screens: {
         '2xl': '1200px',
       },
     },
     extend: {
+      padding: {
+        30: '120px',
+      },
       colors: {
         monochrome: {
           50: '#FDFEFF',

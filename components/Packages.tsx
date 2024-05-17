@@ -156,7 +156,10 @@ const Breadcrumb = ({ selected }: { selected: boolean }) => {
 export default function Packages() {
   return (
     <>
-      <section id="packages" className="bg-[#804DEC]/10 px-5 py-12">
+      <section
+        id="packages"
+        className="xl:py-30 bg-[#804DEC]/10 py-12 md:py-20"
+      >
         <div className="container flex flex-col items-center">
           <div className="relative">
             <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
@@ -166,7 +169,10 @@ export default function Packages() {
               packages
             </h1>
           </div>
-          <Tabs defaultValue="puppy" className="">
+          <Tabs
+            defaultValue="puppy"
+            className="flex flex-col items-center lg:w-auto"
+          >
             <TabsList className="mt-5">
               <TabsTrigger value="puppy">Puppy</TabsTrigger>
               <TabsTrigger value="adult">Adult</TabsTrigger>
@@ -268,7 +274,7 @@ export default function Packages() {
             rel="noreferrer"
             target="_blank"
           >
-            <Button variant={'secondary'}>Complete package list</Button>
+            <Button>Complete package list</Button>
           </Link>
         </div>
       </section>
