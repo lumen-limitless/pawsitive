@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-grape py-12 text-monochrome-50 xl:px-[269px]"
+      className="bg-grape py-12 text-monochrome-50 md:py-20"
     >
       <div className="container flex flex-col items-center">
         <h1 className="mb-4 text-3xl font-semibold md:text-4xl lg:text-5xl">
