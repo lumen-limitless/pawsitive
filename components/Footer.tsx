@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import PawsitiveSVG from 'public/pawsitive.svg'
-import Socials from './Socials'
+import PawsitiveSVG from 'public/pawsitive.svg';
+import Socials from './Socials';
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-black text-center">
+      <div className="text-center">
         <p className="py-5 text-white">
           Website designed by{' '}
           <a
@@ -34,5 +34,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

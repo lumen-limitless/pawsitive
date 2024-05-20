@@ -57,7 +57,25 @@ export default function RootLayout({
         <Toaster />
 
         <Analytics />
+
+        <TailwindIndicator />
       </body>
     </html>
   );
 }
+
+const TailwindIndicator = () => {
+  if (process.env.NODE_ENV === 'production') return null;
+
+  return (
+    <div className="fixed bottom-0 left-0 z-50 bg-black p-2 font-mono text-sm text-white">
+      <span className="block sm:hidden">XS</span>
+      <span className="hidden sm:block md:hidden">SM</span>
+      <span className="hidden md:block lg:hidden">MD</span>
+      <span className="hidden lg:block xl:hidden">LG</span>
+      <span className="hidden xl:block 2xl:hidden">XL</span>
+      <span className="hidden 2xl:block 3xl:hidden">2XL</span>
+      <span className="hidden 3xl:block">3XL</span>
+    </div>
+  );
+};

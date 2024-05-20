@@ -1,25 +1,31 @@
 'use client';
+import AboutPawSVG from '@/public/about-paw.svg';
+import AccentSVG from '@/public/accent-4.svg';
 import { BriefcaseIcon, DogIcon } from 'lucide-react';
 import { Badge } from './ui/badge';
-import { Separator } from './ui/separator';
 
 export default function About() {
   return (
-    <section id="about" className="flex bg-[#CCBBF2]/10 px-5 py-12">
-      <div className="mx-auto flex w-full max-w-7xl flex-col lg:flex-row lg:gap-[120px]">
+    <section
+      id="about"
+      className="flex bg-[#CCBBF2]/10 py-12 md:py-20 xl:py-30"
+    >
+      <div className="container flex flex-col lg:flex-row lg:gap-[120px]">
         <div className="max-w-[631px] space-y-4">
-          <h1 className="text-3xl font-semibold">About us</h1>
+          <div className="relative inline-block">
+            <AboutPawSVG className="absolute -left-28 -top-20 -z-[1] hidden h-48 w-48 2xl:inline" />
+            <AccentSVG className="absolute -right-20 -top-12 -z-[1] hidden h-24 w-24 lg:inline" />
+            <h1 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
+              About us
+            </h1>
+          </div>
 
           <div className="flex h-6 items-center gap-1 text-2xl font-semibold">
             <h2 className="text-grape">Amanda</h2>
-            <Separator
-              orientation="vertical"
-              className="bg-black bg-foreground"
-            />
             <span className="text-[#CCBBF2]">Founder</span>
           </div>
 
-          <div className="flex items-center justify-start gap-3">
+          <div className="flex flex-col items-start justify-start gap-3 lg:flex-row lg:items-center">
             <Badge variant={'secondary'}>
               {' '}
               <BriefcaseIcon className="mr-1" /> Professional pet care provider

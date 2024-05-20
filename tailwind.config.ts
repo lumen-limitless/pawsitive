@@ -9,14 +9,32 @@ const config = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '995px',
+      xl: '1200px',
+      '2xl': '1400px',
+      '3xl': '1920px',
+    },
     container: {
       center: true,
-      padding: '2rem',
+      padding: {
+        '2xl': '1rem',
+        xl: '100px',
+        lg: '100px',
+        md: '100px',
+        sm: '40px',
+        DEFAULT: '40px',
+      },
       screens: {
         '2xl': '1200px',
       },
     },
     extend: {
+      padding: {
+        30: '120px',
+      },
       colors: {
         monochrome: {
           50: '#FDFEFF',
