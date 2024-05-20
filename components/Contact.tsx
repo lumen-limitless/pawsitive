@@ -35,9 +35,9 @@ export default function Contact() {
       id="contact"
       className="relative overflow-clip bg-grape py-12 text-monochrome-50 md:py-20"
     >
-      <PawOutlineSVG className="absolute left-10 top-20 hidden h-[400px] w-[400px] lg:inline" />
-      <PawOutlineSVG className="absolute -bottom-72 right-0 hidden h-[680px] w-[680px]  -rotate-45 lg:inline" />
-      <Flower2SVG className="absolute right-16 top-16 hidden h-[125px] w-[125px] lg:inline" />
+      <PawOutlineSVG className="pointer-events-none absolute left-10 top-20 hidden h-[400px] w-[400px] lg:inline" />
+      <PawOutlineSVG className="pointer-events-none absolute -bottom-72 right-0 hidden h-[680px]  w-[680px] -rotate-45 lg:inline" />
+      <Flower2SVG className="pointer-events-none absolute right-16 top-16 hidden h-[125px] w-[125px] lg:inline" />
       <div className="container flex flex-col items-center">
         <h1 className="mb-4 text-3xl font-semibold md:text-4xl lg:text-5xl">
           Any questions?
@@ -81,7 +81,7 @@ export default function Contact() {
 
           <SubmitButton />
         </form>
-        <div className="mt-9">
+        <div className="z-10 mt-9">
           <Socials />
         </div>
       </div>
