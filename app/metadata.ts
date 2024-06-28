@@ -47,6 +47,8 @@ export const defaultMetadata: Metadata = {
     'pet care tips',
     'pet care advice',
     'pet care information',
+    'pet care Rochester NY',
+    'Rochester NY pet',
   ],
   manifest: '/manifest.json',
 
