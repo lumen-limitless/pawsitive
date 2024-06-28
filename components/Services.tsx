@@ -98,7 +98,7 @@ export default function Services() {
                 />
               </svg>
 
-              <h2 className="text-2xl">{service.title}</h2>
+              <h2 className="mt-2 text-2xl">{service.title}</h2>
               <p className="mt-2">{service.description}</p>
             </div>
           ))}
