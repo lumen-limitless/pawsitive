@@ -1,7 +1,6 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import PawCircleSVG from 'public/paw-circle.svg';
 import PlusCircleSVG from 'public/plus-circle.svg';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
@@ -38,10 +37,69 @@ export default function Services() {
         </h1>
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
           {services.map((service) => (
-            <div key={service.title}>
-              <PawCircleSVG className="h-20 w-20" />
+            <div key={service.title} className="flex flex-col items-start">
+              <svg
+                width="40"
+                height="40"
+                viewBox="10 10 40 20" // Adjusted viewBox to remove excess white space
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="33"
+                  cy="20"
+                  r="20"
+                  fill="#7791EE"
+                  fillOpacity="0.1" // Changed attribute name to camelCase
+                />
+                <circle
+                  cx="30"
+                  cy="20"
+                  r="19.5"
+                  stroke="#7791EE"
+                  strokeOpacity="0.4" // Changed attribute name to camelCase
+                />
+                <ellipse
+                  cx="22.9012"
+                  cy="17.5464"
+                  rx="2.05246"
+                  ry="1.5932"
+                  transform="rotate(15 22.9012 17.5464)"
+                  fill="#7791EE"
+                />
+                <ellipse
+                  cx="26.8328"
+                  cy="13.5314"
+                  rx="2.18123"
+                  ry="2.18123"
+                  fill="#7791EE"
+                />
+                <ellipse
+                  cx="2.05246"
+                  cy="1.5932"
+                  rx="2.05246"
+                  ry="1.5932"
+                  transform="matrix(-0.965926 0.258819 0.258819 0.965926 38.6216 15.4762)"
+                  fill="#7791EE"
+                />
+                <ellipse
+                  cx="2.18123"
+                  cy="2.18123"
+                  rx="2.18123"
+                  ry="2.18123"
+                  transform="matrix(-1 0 0 1 35.3011 11.3502)"
+                  fill="#7791EE"
+                />
+                <path
+                  fillRule="evenodd" // Changed attribute name to camelCase
+                  clipRule="evenodd" // Changed attribute name to camelCase
+                  d="M37.4823 24.181C37.4823 21.0469 31.7702 17.1318 30.312 16.1833C30.1066 16.0497 29.8461 16.0497 29.6407 16.1833C28.1824 17.1318 22.4703 21.0469 22.4703 24.181C22.4703 26.5219 23.9459 28.6076 26.512 28.6076C28.3389 28.6076 29.9763 26.4905 29.9763 26.4905C29.9763 26.4905 31.6138 28.6076 33.4406 28.6076C36.0068 28.6076 37.4823 26.5219 37.4823 24.181Z"
+                  fill="#7791EE"
+                />
+              </svg>
+
               <h2 className="text-2xl">{service.title}</h2>
-              <p>{service.description}</p>
+              <p className="mt-2">{service.description}</p>
             </div>
           ))}
         </div>
