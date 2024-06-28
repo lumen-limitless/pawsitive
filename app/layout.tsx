@@ -56,10 +56,9 @@ export default function RootLayout({
 
         <Toaster />
 
-        <Analytics />
-
         <TailwindIndicator />
       </body>
+      <Analytics />
     </html>
   );
 }
