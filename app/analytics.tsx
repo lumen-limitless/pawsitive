@@ -7,7 +7,7 @@ export default function Analytics() {
   return (
     <>
       <VercelAnalytics />
-      <GoogleAnalytics gaId="G-XPTFJLC38S" />
+      <GoogleAnalytics gaId="G-DY9B23GEZC" />
     </>
   );
 }
