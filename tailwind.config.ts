@@ -24,8 +24,8 @@ const config = {
         xl: '100px',
         lg: '100px',
         md: '100px',
-        sm: '40px',
-        DEFAULT: '40px',
+        sm: '20px',
+        DEFAULT: '20px',
       },
       screens: {
         '2xl': '1200px',
