@@ -34,12 +34,12 @@ export default function RootLayout({
       </head>
 
       <body
-        style={{
-          textRendering: 'optimizeLegibility',
-        }}
+        // style={{
+        //   textRendering: 'optimizeLegibility',
+        // }}
         className={cn(
           poppins.className,
-          'flex min-h-screen touch-manipulation flex-col antialiased',
+          'flex min-h-screen touch-manipulation flex-col',
         )}
       >
         <a href="#main" className="sr-only" aria-label="skip">
