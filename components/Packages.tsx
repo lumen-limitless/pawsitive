@@ -156,7 +156,7 @@ const Breadcrumb = ({ selected }: { selected: boolean }) => {
 export default function Packages() {
   return (
     <>
-      <section id="packages" className="bg-primary/10 py-12 md:py-20 xl:py-30">
+      <section id="packages" className="bg-[#f6f6fe] py-12 md:py-20 xl:py-30">
         <div className="container flex flex-col items-center">
           <div className="relative">
             <DoubleStarSVG className="absolute -right-20 -top-3 h-16 w-16 text-primary" />
