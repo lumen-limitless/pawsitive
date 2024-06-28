@@ -14,7 +14,7 @@ export default function Landing() {
           className="mb-12 mt-0 flex flex-grow flex-col gap-6 md:mb-20 lg:mt-20 lg:max-w-[445px] xl:my-[120px] xl:max-w-[530px] 2xl:my-[164px] 2xl:max-w-[620px]"
           id="hero-content"
         >
-          <h1 className="mt-6 break-words text-[32px]/[44px] font-semibold lg:mt-0 lg:text-6xl">
+          <h1 className="mt-6 text-nowrap text-[32px]/[44px] font-semibold lg:mt-0 lg:text-6xl">
             Caring for your <br className="hidden lg:block" />
             pet like family
           </h1>
@@ -41,7 +41,7 @@ export default function Landing() {
           </div>
         </div>
         <div
-          className="bottom-0 left-[52%] -z-[1] lg:absolute lg:max-w-[445px]  xl:max-w-[530px] 2xl:max-w-[620px]"
+          className="bottom-0 left-[52%] -z-[1] lg:absolute lg:max-w-[445px] xl:max-w-[530px] 2xl:max-w-[620px]"
           id="hero-image"
         >
           <div className="relative">
