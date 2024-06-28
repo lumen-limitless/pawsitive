@@ -170,7 +170,7 @@ export default function Packages() {
             defaultValue="puppy"
             className="flex flex-col items-center lg:mt-12 lg:w-auto"
           >
-            <TabsList>
+            <TabsList className="mt-5">
               <TabsTrigger value="puppy">Puppy</TabsTrigger>
               <TabsTrigger value="adult">Adult</TabsTrigger>
             </TabsList>
